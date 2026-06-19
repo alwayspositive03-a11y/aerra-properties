@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aerra Properties | Gurgaon Real Estate Consultant</title>
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="description" content="Aerra Properties - Gurgaon Luxury Real Estate Consultant">
+</head>
+
+<body id="top">
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="header-container">
+
+            <div class="brand">
+
+                <!-- LOGO UNCHANGED AS REQUESTED -->
+                <img src="lol.png"
+                     alt="Aerra Properties Logo"
+                     class="logo">
+
+                <div class="brand-text">
+                    <h1>Aerra Properties</h1>
+                    <p>Your Gateway to Luxury Living</p>
+                </div>
+
+            </div>
+
+            <nav class="nav-menu">
+
+                <a href="#top">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#enquire">Enquire</a>
+
+                <a href="tel:+919988552240" class="call-btn">
+                    Call Now
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!-- Hero Section -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h2>Discover Gurgaon's Finest Properties</h2>
+
+        <p>Luxury • Ultra-Luxury • Premium Residential Projects</p>
+
+        <div class="hero-buttons">
+
+            <a href="#projects" class="btn">Explore Projects</a>
+
+            <a href="#" class="btn" onclick="openModal(event)">
+                Book Site Visit
+            </a>
+
+            <a href="https://wa.me/919988552240" class="btn" target="_blank">
+                WhatsApp Us
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- Featured Projects -->
+    <section id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <img src="images/dlf-privana-north.jpg" loading="lazy" alt="DLF Privana North">
+
+                <div class="card-content">
+                    <h3>DLF Privana North</h3>
+                    <p><strong>Location:</strong> Sector 76, Gurgaon</p>
+                    <p><strong>Developer:</strong> DLF Limited</p>
+                    <p><strong>Starting Price:</strong> On Request</p>
+
+                    <button class="enquire-btn"
+                        onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/elan-the-presidential.jpg" loading="lazy" alt="Elan The Presidential">
+
+                <div class="card-content">
+                    <h3>Elan The Presidential</h3>
+                    <p><strong>Location:</strong> DXP Sector 106, Gurgaon</p>
+                    <p><strong>Developer:</strong> Elan Limited</p>
+                    <p><strong>Starting Price:</strong> On Request</p>
+
+                    <button class="enquire-btn"
+                        onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/dlf-privana-west.jpg" loading="lazy" alt="DLF Privana West">
+
+                <div class="card-content">
+                    <h3>DLF Privana West</h3>
+                    <p><strong>Location:</strong> Sector 76, Gurgaon</p>
+                    <p><strong>Developer:</strong> DLF Limited</p>
+                    <p><strong>Starting Price:</strong> On Request</p>
+
+                    <button class="enquire-btn"
+                        onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/smart-world-one-dxp.jpg" loading="lazy" alt="SmartWorld One DXP">
+
+                <div class="card-content">
+                    <h3>SmartWorld One DXP</h3>
+                    <p><strong>Location:</strong> Sector 113, Gurgaon</p>
+                    <p><strong>Developer:</strong> SmartWorld Developers</p>
+                    <p><strong>Starting Price:</strong> On Request</p>
+
+                    <button class="enquire-btn"
+                        onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/m3m-altitude.jpg" loading="lazy" alt="M3M Altitude">
+
+                <div class="card-content">
+                    <h3>M3M Altitude</h3>
+                    <p><strong>Location:</strong> Sector 65, Gurgaon</p>
+                    <p><strong>Developer:</strong> M3M India</p>
+                    <p><strong>Starting Price:</strong> On Request</p>
+
+                    <button class="enquire-btn"
+                        onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/signature-titanium.jpg" loading="lazy" alt="Signature Global Titanium SPR">
+
+                <div class="card-content">
+                    <h3>Signature Global Titanium SPR</h3>
+                    <p><strong>Location:</strong> Sector 71, Gurgaon</p>
+                    <p><strong>Developer:</strong> Signature Global</p>
+                    <p><strong>Starting Price:</strong> On Request</p>
+
+                    <button class="enquire-btn"
+                        onclick="document.getElementById('enquire').scrollIntoView({behavior:'smooth'})">
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+<section class="developer-partners">
+    <div class="container">
+        <h2>Trusted Developer Partners</h2>
+        <p>Connecting clients with India's most prestigious real estate developers.</p>
+
+        <div class="logo-slider">
+            <div class="logo-track">
+
+                <!-- First Set -->
+                <img src="images/logos/paras.png" alt="Paras">
+                <img src="images/logos/max.jpg" alt="Max">
+                <img src="images/logos/aipl.png" alt="Aipl">
+                <img src="images/logos/tata.png" alt="Tata">
+                <img src="images/logos/sobha.jpg" alt="Sobha">
+                <img src="images/logos/dlf.png" alt="DLF">
+                <img src="images/logos/godrej.png" alt="Godrej">
+                <img src="images/logos/elan.png" alt="Elan">
+                <img src="images/logos/central-park.png" alt="Central Park">
+                <img src="images/logos/smartworld.png" alt="Smartworld">
+                <img src="images/logos/adani.png" alt="Adani Realty">
+                <img src="images/logos/oberoi.png" alt="Oberoi">
+                <img src="images/logos/birla.jpg" alt="Birla">
+                <img src="images/logos/emaar.png" alt="Emaar">
+                <img src="images/logos/trevoc.png" alt="Trevoc">
+                <img src="images/logos/signature-global.png" alt="Signature Global">
+                <img src="images/logos/whiteland.png" alt="Whiteland">
+                <img src="images/logos/m3m.png" alt="M3M">
+                <img src="images/logos/experion.png" alt="Experion">
+                <img src="images/logos/ashiana.png" alt="Ashiana">
+                
+
+                <!-- Duplicate for Infinite Scroll -->
+                <img src="images/logos/paras.png" alt="Paras">
+                <img src="images/logos/max.jpg" alt="Max">
+                <img src="images/logos/aipl.png" alt="Aipl">
+                <img src="images/logos/tata.png" alt="Tata">
+                <img src="images/logos/sobha.jpg" alt="Sobha">
+                <img src="images/logos/dlf.png" alt="DLF">
+                <img src="images/logos/godrej.png" alt="Godrej">
+                <img src="images/logos/elan.png" alt="Elan">
+                <img src="images/logos/central-park.png" alt="Central Park">
+                <img src="images/logos/smartworld.png" alt="Smartworld">
+                <img src="images/logos/adani.png" alt="Adani Realty">
+                <img src="images/logos/oberoi.png" alt="Oberoi">
+                <img src="images/logos/birla.jpg" alt="Birla">
+                <img src="images/logos/emaar.png" alt="Emaar">
+                <img src="images/logos/trevoc.png" alt="Trevoc">
+                <img src="images/logos/signature-global.png" alt="Signature Global">
+                <img src="images/logos/whiteland.png" alt="Whiteland">
+                <img src="images/logos/m3m.png" alt="M3M">
+                <img src="images/logos/experion.png" alt="Experion">
+                <img src="images/logos/ashiana.png" alt="Ashiana">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="market-insights" class="market-insights">
+    <div class="container">
+
+        <div class="section-heading">
+            <span>Market Insights</span>
+            <h2>Latest Real Estate Trends & Investment Opportunities</h2>
+            <p>
+                Stay updated with Gurgaon’s luxury property market,
+                investment opportunities, price trends and expert advice.
+            </p>
+        </div>
+
+        <div class="insights-grid">
+
+            <div class="insight-card">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200"
+                    alt="Luxury Property">
+
+                <div class="insight-content">
+                    <span class="category">Investment Guide</span>
+                    <h3>Why Gurgaon Luxury Real Estate Continues To Outperform</h3>
+                    <p>
+                        Explore the key reasons behind Gurgaon’s rising demand
+                        among HNIs and investors.
+                    </p>
+                    <a href="./blog/gurgaon-luxury-market.html">Read More →</a>
+                </div>
+            </div>
+
+            <div class="insight-card">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200"
+                    alt="Dwarka Expressway">
+
+                <div class="insight-content">
+                    <span class="category">Market Update</span>
+                    <h3>Dwarka Expressway: The New Growth Corridor</h3>
+                    <p>
+                        Infrastructure developments are transforming investment potential.
+                    </p>
+                    <a href="./blog/dwarka-expressway-investment.html">Read More →</a>
+                </div>
+            </div>
+
+            <div class="insight-card">
+                <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?w=1200"
+                    alt="Golf Course Road">
+
+                <div class="insight-content">
+                    <span class="category">Luxury Living</span>
+                    <h3>Top Ultra-Luxury Projects To Watch In 2026</h3>
+                    <p>
+                        Discover premium residential developments attracting global buyers.
+                    </p>
+                    <a href="./blog/golf-course-road-guide.html">Read More →</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    <!-- Enquiry Section -->
+    <section class="contact-section" id="enquire">
+
+        <h2 class="section-title">Get in Touch</h2>
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+
+                <h3>Let's Connect</h3>
+
+                <p>📞 <strong>Call:</strong><br>9988552240</p>
+
+                <p>✉ <strong>Email:</strong><br>alwayspositive03@gmail.com</p>
+
+                <p>💬 <strong>WhatsApp:</strong><br>Instant Property Assistance</p>
+
+                <a href="https://wa.me/919988552240"
+                   target="_blank"
+                   class="whatsapp-btn">
+                    Chat on WhatsApp
+                </a>
+
+            </div>
+
+            <form id="leadForm">
+
+    <input
+      type="text"
+      id="name"
+      placeholder="Your Name"
+      required
+    >
+
+    <input
+      type="tel"
+      id="phone"
+      placeholder="Phone Number"
+      required
+    >
+
+    <input
+      type="text"
+      id="project"
+      placeholder="Interested Project"
+      required
+    >
+
+    <textarea
+      id="requirement"
+      placeholder="Requirement"
+      required
+    ></textarea>
+
+    <button type="submit">
+      Submit Enquiry
+    </button>
+
+</form>
+
+<p id="message"></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            📞 9988552240 |
+            ✉ alwayspositive03@gmail.com
+        </p>
+
+        <p>
+            © 2026 Aerra Properties. All Rights Reserved.
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

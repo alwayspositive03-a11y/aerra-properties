@@ -1,0 +1,168 @@
+body{
+font-family:Arial,sans-serif;
+margin:0;
+background:#f6f8fc;
+}
+
+.blog-header{
+background:#0033A0;
+color:white;
+text-align:center;
+padding:70px 20px;
+}
+
+.blog-header h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.blog-header p{
+font-size:18px;
+opacity:0.9;
+}
+
+.featured-blog{
+max-width:1200px;
+margin:60px auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+padding:0 20px;
+align-items:center;
+}
+
+.featured-blog img{
+width:100%;
+border-radius:15px;
+}
+
+.featured-blog h2{
+font-size:36px;
+}
+
+.featured-blog a{
+display:inline-block;
+margin-top:15px;
+background:#0033A0;
+color:white;
+padding:12px 25px;
+text-decoration:none;
+border-radius:8px;
+}
+
+.blog-grid{
+max-width:1200px;
+margin:auto;
+padding:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+}
+
+.blog-card{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.blog-card:hover{
+transform:translateY(-8px);
+}
+
+.blog-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.blog-card h3{
+padding:15px;
+margin:0;
+}
+
+.blog-card p{
+padding:0 15px;
+color:#666;
+}
+
+.blog-card a{
+display:block;
+text-align:center;
+background:#0033A0;
+color:white;
+padding:12px;
+text-decoration:none;
+margin-top:15px;
+}
+
+.lead-section{
+text-align:center;
+padding:80px 20px;
+background:white;
+margin-top:60px;
+}
+
+.lead-btn{
+display:inline-block;
+padding:15px 30px;
+background:#0033A0;
+color:white;
+text-decoration:none;
+border-radius:10px;
+}
+
+@media(max-width:768px){
+
+.featured-blog{
+grid-template-columns:1fr;
+}
+
+.blog-header h1{
+font-size:34px;
+}
+
+.featured-blog h2{
+font-size:28px;
+}
+
+}
+
+.blog-page{
+max-width:1000px;
+margin:auto;
+padding:50px 20px;
+}
+
+.blog-page img{
+width:100%;
+border-radius:15px;
+margin-bottom:30px;
+}
+
+.blog-page h1{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.blog-page h2{
+margin-top:35px;
+color:#0033A0;
+}
+
+.blog-page p{
+font-size:18px;
+line-height:1.8;
+color:#555;
+}
+
+.back-btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 28px;
+background:#0033A0;
+color:white;
+text-decoration:none;
+border-radius:8px;
+}
