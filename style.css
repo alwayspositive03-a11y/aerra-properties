@@ -496,3 +496,28 @@ footer {
         padding: 30px;
     }
 }
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    width: 45px;
+    height: 45px;
+    background: #0f172a;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-4px);
+    background: #c8a97e; /* luxury gold */
+}
