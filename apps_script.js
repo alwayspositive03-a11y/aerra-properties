@@ -283,7 +283,7 @@ leadForm.addEventListener('submit', async (e) => {
     
     try {
         // Send to Google Apps Script
-        const response = await fetch('YOUR_APPS_SCRIPT_URL_HERE', {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbyjtVoX9IwoHxT5O5gD3NkSimch9gXUCSsexQ4VowfEQ18Y7qvUcM7kiysF1BUhbrbE/exec', {
             method: 'POST',
             mode: 'no-cors',
             headers: {
