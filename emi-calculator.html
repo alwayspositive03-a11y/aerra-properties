@@ -1,0 +1,246 @@
+<!-- emi-calculator.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator - Aerra Properties</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header" id="header">
+        <div class="header-container">
+            <div class="brand">
+                <img src="lol.png" alt="Aerra Properties" class="logo">
+                <div class="brand-text">
+                    <h1>Aerra Properties</h1>
+                    <p>Your Gateway to Luxury Living</p>
+                </div>
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#tools">Tools</a>
+                <a href="index.html#insights">Insights</a>
+                <a href="index.html#enquire">Contact</a>
+                <a href="tel:+917009781399" class="call-btn">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="page-hero" style="padding-top: 120px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; text-align: center; padding-bottom: 60px;">
+        <div class="container">
+            <h1 style="font-family: var(--font-display); font-size: 48px; margin-bottom: 12px;">EMI Calculator</h1>
+            <p style="font-size: 18px; opacity: 0.9; max-width: 600px; margin: 0 auto;">Plan your home loan payments with our easy-to-use calculator</p>
+        </div>
+    </section>
+
+    <section style="padding: 60px 0;">
+        <div class="container">
+            <div style="max-width: 700px; margin: 0 auto; background: white; padding: 48px; border-radius: var(--radius); box-shadow: var(--shadow-hover);">
+                
+                <div style="margin-bottom: 32px;">
+                    <label style="font-weight: 600; display: block; margin-bottom: 8px;">Loan Amount (₹)</label>
+                    <input type="range" id="loanAmount" min="100000" max="100000000" step="100000" value="5000000" style="width: 100%;">
+                    <input type="text" id="loanAmountDisplay" value="₹50,00,000" style="width: 100%; padding: 12px; border: 2px solid var(--gray-medium); border-radius: 8px; font-size: 18px; font-weight: 600; text-align: center; margin-top: 8px;">
+                </div>
+
+                <div style="margin-bottom: 32px;">
+                    <label style="font-weight: 600; display: block; margin-bottom: 8px;">Interest Rate (% p.a.)</label>
+                    <input type="range" id="interestRate" min="6" max="15" step="0.25" value="8.5" style="width: 100%;">
+                    <input type="text" id="interestRateDisplay" value="8.50%" style="width: 100%; padding: 12px; border: 2px solid var(--gray-medium); border-radius: 8px; font-size: 18px; font-weight: 600; text-align: center; margin-top: 8px;">
+                </div>
+
+                <div style="margin-bottom: 32px;">
+                    <label style="font-weight: 600; display: block; margin-bottom: 8px;">Loan Tenure (Years)</label>
+                    <input type="range" id="loanTenure" min="1" max="30" step="1" value="20" style="width: 100%;">
+                    <input type="text" id="loanTenureDisplay" value="20 Years" style="width: 100%; padding: 12px; border: 2px solid var(--gray-medium); border-radius: 8px; font-size: 18px; font-weight: 600; text-align: center; margin-top: 8px;">
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 32px; padding: 24px; background: var(--gray-light); border-radius: var(--radius);">
+                    <div style="text-align: center;">
+                        <p style="font-size: 14px; color: var(--text-light);">Monthly EMI</p>
+                        <p id="emiResult" style="font-size: 24px; font-weight: 700; color: var(--primary);">₹0</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <p style="font-size: 14px; color: var(--text-light);">Total Interest</p>
+                        <p id="totalInterest" style="font-size: 24px; font-weight: 700; color: var(--secondary);">₹0</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <p style="font-size: 14px; color: var(--text-light);">Total Payment</p>
+                        <p id="totalPayment" style="font-size: 24px; font-weight: 700; color: var(--dark);">₹0</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 24px; text-align: center;">
+                    <a href="https://wa.me/917009781399?text=I%20want%20to%20know%20about%20home%20loans" target="_blank" class="btn btn-whatsapp" style="justify-content: center;">
+                        <i class="fab fa-whatsapp"></i> Get Best Loan Offers
+                    </a>
+                </div>
+            </div>
+
+            <div style="max-width: 700px; margin: 40px auto; background: white; padding: 48px; border-radius: var(--radius); box-shadow: var(--shadow-hover);">
+                <h3 style="font-family: var(--font-display); margin-bottom: 16px;">Amortization Schedule</h3>
+                <div style="max-height: 400px; overflow-y: auto;" id="amortizationTable">
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                        <thead style="background: var(--primary); color: white; position: sticky; top: 0;">
+                            <tr>
+                                <th style="padding: 10px; text-align: left;">Year</th>
+                                <th style="padding: 10px; text-align: right;">Payment</th>
+                                <th style="padding: 10px; text-align: right;">Principal</th>
+                                <th style="padding: 10px; text-align: right;">Interest</th>
+                                <th style="padding: 10px; text-align: right;">Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody id="amortizationBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="lol.png" alt="Aerra Properties" class="footer-logo">
+                    <h3>Aerra Properties</h3>
+                    <p>Your trusted partner for luxury real estate in Gurgaon.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/aerra_properties" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/aerraproperties" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/company/aerraproperties" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/917009781399" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#projects">Projects</a></li>
+                        <li><a href="index.html#tools">Tools</a></li>
+                        <li><a href="index.html#enquire">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="emi-calculator.html">EMI Calculator</a></li>
+                        <li><a href="loan-comparison.html">Loan Comparison</a></li>
+                        <li><a href="project-comparison.html">Project Comparison</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+917009781399">+91 7009781399</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@aerraproperties.com">info@aerraproperties.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aerra Properties. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollTop" class="scroll-top"><i class="fas fa-chevron-up"></i></button>
+
+    <script src="script.js"></script>
+    <script>
+        // EMI Calculator Logic
+        function formatIndianCurrency(num) {
+            return '₹' + new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(num);
+        }
+
+        function calculateEMI() {
+            const P = parseFloat(document.getElementById('loanAmount').value);
+            const r = parseFloat(document.getElementById('interestRate').value) / 100 / 12;
+            const n = parseFloat(document.getElementById('loanTenure').value) * 12;
+
+            if (P <= 0 || r <= 0 || n <= 0) {
+                document.getElementById('emiResult').textContent = '₹0';
+                return;
+            }
+
+            const emi = P * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1);
+            const totalPayment = emi * n;
+            const totalInterest = totalPayment - P;
+
+            document.getElementById('emiResult').textContent = formatIndianCurrency(emi);
+            document.getElementById('totalInterest').textContent = formatIndianCurrency(totalInterest);
+            document.getElementById('totalPayment').textContent = formatIndianCurrency(totalPayment);
+
+            // Generate amortization schedule
+            generateAmortization(P, r, n, emi);
+        }
+
+        function generateAmortization(P, rate, n, emi) {
+            let balance = P;
+            let html = '';
+            let yearCount = 1;
+            let yearlyPayment = 0;
+            let yearlyPrincipal = 0;
+            let yearlyInterest = 0;
+
+            for (let i = 1; i <= n; i++) {
+                const interest = balance * rate;
+                const principal = emi - interest;
+                balance -= principal;
+
+                yearlyPayment += emi;
+                yearlyPrincipal += principal;
+                yearlyInterest += interest;
+
+                if (i % 12 === 0 || i === n) {
+                    html += `
+                        <tr>
+                            <td style="padding: 8px; border-bottom: 1px solid var(--gray-medium);">${yearCount}</td>
+                            <td style="padding: 8px; border-bottom: 1px solid var(--gray-medium); text-align: right;">${formatIndianCurrency(yearlyPayment)}</td>
+                            <td style="padding: 8px; border-bottom: 1px solid var(--gray-medium); text-align: right;">${formatIndianCurrency(yearlyPrincipal)}</td>
+                            <td style="padding: 8px; border-bottom: 1px solid var(--gray-medium); text-align: right;">${formatIndianCurrency(yearlyInterest)}</td>
+                            <td style="padding: 8px; border-bottom: 1px solid var(--gray-medium); text-align: right;">${balance > 0 ? formatIndianCurrency(balance) : '₹0'}</td>
+                        </tr>
+                    `;
+                    yearCount++;
+                    yearlyPayment = 0;
+                    yearlyPrincipal = 0;
+                    yearlyInterest = 0;
+                }
+            }
+
+            document.getElementById('amortizationBody').innerHTML = html;
+        }
+
+        // Event listeners for sliders
+        ['loanAmount', 'interestRate', 'loanTenure'].forEach(id => {
+            const slider = document.getElementById(id);
+            const display = document.getElementById(id + 'Display');
+            
+            slider.addEventListener('input', () => {
+                if (id === 'loanAmount') {
+                    display.value = formatIndianCurrency(parseFloat(slider.value));
+                } else if (id === 'interestRate') {
+                    display.value = parseFloat(slider.value).toFixed(2) + '%';
+                } else {
+                    display.value = parseFloat(slider.value) + ' Years';
+                }
+                calculateEMI();
+            });
+        });
+
+        // Initial calculation
+        calculateEMI();
+    </script>
+</body>
+</html>
